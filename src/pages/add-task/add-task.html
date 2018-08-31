@@ -1,0 +1,40 @@
+<!--
+  Generated template for the AddTaskPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>AddTask</ion-title>
+  </ion-navbar>
+  <ion-list inset>
+
+
+
+</ion-list>
+</ion-header>
+
+
+<ion-content padding>
+<ion-list>
+  <ion-item>
+    <ion-label floating>Task</ion-label>
+    <ion-input type="text" [(ngModel)]="Task"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Description</ion-label>
+    <ion-input type="text" [(ngModel)]="Description"></ion-input>
+  </ion-item>
+</ion-list>
+<button ion-button icon-start color="danger" (click)="close()">
+  <ion-icon name="md-close-circle"></ion-icon>
+  cancel
+</button>
+<button ion-button icon-end (click)="save()">
+  enter
+  <ion-icon name="md-checkmark-circle"></ion-icon>
+</button>
+
+</ion-content>

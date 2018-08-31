@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      To do list
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<button ion-button color="primary" block (click)="AddTaskModal()">Add addTask</button>
+	<ion-list [(ngModel)]="tasks" ngDefaultControl>
+	<ion-grid *ngFor ="let t of tasks; let i = index">
+		<ion-row>
+			<ion-col col-10>
+			<button ion-button full color="light" (click)="TaskModal(i,t[0].task,t[0].description)">{{t[0].task}}</button>
+			</ion-col>
+			<ion-col col-auto>
+				<button ion-button color="danger" (click)="deleteTask(i)"><ion-icon name="md-trash"></ion-icon></button>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+
+</ion-list>
+</ion-content>
